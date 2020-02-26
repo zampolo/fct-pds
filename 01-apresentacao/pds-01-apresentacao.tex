@@ -1,0 +1,151 @@
+\input{../slides-common/preambule}
+
+\pdsetup{
+   lf = {EC01045 PDS},
+   rf = {Apresentação do curso},palette = {Sea}, randomdots={false}
+}
+
+%opening
+\title{\Large EC01045 -- Processamento Digital de Sinais\\ \vspace{1cm}Apresentação do curso}
+
+\begin{document}
+   \maketitle[randomdots={false}]
+   \begin{slide}{Agenda}
+      \tableofcontents[content=sections]
+   \end{slide}
+
+   \section[ slide = false ]{Professor }
+      \begin{slide}[toc=]{Professor}
+         \begin{itemize}
+            \item Professor: Ronaldo de Freitas Zampolo
+            \item Afiliação:\\
+                  Laboratório de Processamento de Sinais - LaPS\\
+                  Faculdade de Eng. da Computação e Telecomunicações - FCT\\
+                  Instituto de Tecnologia - ITEC\\
+                  Universidade Federal do Pará - UFPA
+            \item Atendimento:\\
+                  Sexta-feira: 11h00 - 12h00\\
+                  Sala~32, anexo do LEEC\\
+                  \texttt{zampolo@ufpa.br}\\ 
+                  %\texttt{zampolo@ieee.org}\\
+                  \texttt{www.laps.ufpa.br/zampolo}
+         \end{itemize}
+      \end{slide}
+      
+   \section[ slide = false ]{Características do Curso}
+      \begin{slide}[toc=]{Características do Curso}
+         \begin{itemize}
+            \item Carga horária: 60 h
+            \item Aulas: terças e quintas, das 11h10 às 12h50
+            \item Tópicos:
+            \begin{itemize}
+               \item Sinais e sistemas discretos (Cap. 2)
+               \item Transformada Z (Cap. 3)
+               \item Amostragem de sinais contínuos (Cap. 4)
+               \item Análise de sistemas lineares invariantes no domínio transformado (Cap. 5)
+               \item Estruturas para implementação de sistemas discretos (Cap. 6)
+               \item Técnicas para projetos de filtros (Cap. 7)
+               \item Transformada de Fourier discreta (Cap. 8)
+            \end{itemize}
+         \end{itemize}         
+      \end{slide}
+      
+   \section[slide=false]{Objetivos do curso}
+      \begin{slide}[toc=]{Objetivos do curso}
+         \begin{itemize}
+            \item Obter familiaridade:
+            \begin{itemize}
+               \item Matemática
+               \item Conceitos
+            \end{itemize}
+            \item Utilizar ferramentas básicas
+            \begin{itemize}
+               \item Projeto
+               \item Simulação
+               \item Implementação
+            \end{itemize}
+            
+         \end{itemize}
+      \end{slide}
+
+   \section[slide=false]{Aplicações}
+      \begin{slide}[toc=]{Algumas situações de aplicação}
+         \begin{itemize}
+            \item Telecomunicações: equalizadores de canal, repetidores digitais, moduladores/demoduladores...
+            \item Processamento de imagem/vídeo: restauração, codificação, avaliação de qualidade, segmentação, realce...
+            \item Processamento de fala: identificação de locutor, reconhecimento, conversores texto-fala e fala-texto...
+            \item Outros tipos de sinais: sísmico, temperatura, pressão...
+         \end{itemize}
+      \end{slide}
+  
+   \section[ slide = false ]{Bibliografia}
+      \begin{slide}[toc=]{Bibliografia}
+         \begin{itemize}
+            \item Bibliografia básica
+            \begin{itemize}
+               \item \textbf{A. V. Oppenheim, R. W. Schafer. \emph{Processamento 
+em tempo discreto de sinais}, 3ª Ed., Pearson, 2013.}
+            \end{itemize}
+            \item Bibliografia complementar
+            \begin{itemize}
+               \item P. S. R. Diniz, E. A. B. Silva, S. L. Netto. \emph{Processamento 
+               Digital de Sinais - Projeto e análise de sistemas}, 2ª edição, Bookman Company, 2014.
+               \item A. V. Oppenheim, A. S. Willsky. \emph{Sinais e Sistemas}, 2ª edição, Pearson, 2010.
+            \end{itemize}
+         \end{itemize}
+      \end{slide}
+
+   \section[ slide = false ]{Avaliação}
+      \begin{slide}[toc=]{Instrumentos}
+         \begin{itemize}
+            \item Avaliação continuada
+            \item Trabalhos (Tr): em equipe ou individual com apresentação à turma
+            \item Testes escritos (Te): em número de 3; 2ª chamada mediante requerimento
+            \item Cálculo da nota ($N$):
+            \begin{equation*}
+               N=\frac{( \text{Tr} \times 4 + \text{Te} \times 6 )} {10}
+            \end{equation*}
+          \end{itemize}
+      \end{slide}
+      
+      \begin{slide}[toc=]{Mapeamento nota-conceito}
+         \begin{itemize}
+            \item Cálculo da nota ($N$): 
+            \begin{equation*}
+               N=\frac{( \text{Tr} \times 4 + \text{Te} \times 6 )} {10}
+            \end{equation*}
+            \item Tabela de mapeamento:
+            \begin{table}
+               \centering
+               \begin{tabular}{c|c}
+                  \hline\hline
+                  \textbf{Faixa} & \textbf{Conceito}\\
+                  \hline
+                  0 -- 4,9 & INS\\
+                  5,0 -- 6,9 & REG\\
+                  7,0 -- 8,9 & BOM\\
+                  9,0 -- 10,0 & EXC\\
+                  \hline\hline
+               \end{tabular}
+            \end{table}    
+         \end{itemize}
+      \end{slide}
+      
+      \begin{slide}[toc=]{Datas dos testes escritos}
+         \begin{itemize}
+            \item Datas prováveis dos testes escritos:
+            \begin{table}
+               \centering
+               \begin{tabular}{|l l|}
+                  \hline
+                  Teste 01: & 16/abril\\
+                  Teste 02: & 21/maio\\
+                  Teste 03: & 18/junho\\
+                  %Teste 04: & 13/dezembro\\
+                  %Substitutiva: & a definir\\
+                  \hline
+               \end{tabular}
+            \end{table}
+         \end{itemize}
+      \end{slide}
+\end{document}

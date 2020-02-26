@@ -1,0 +1,249 @@
+\documentclass[
+size=17pt,
+paper=smartboard,
+mode=present,
+display=slidesnotes,
+style=sailor,
+nopagebreaks,
+blackslide,
+fleqn]{powerdot}
+ %wj capsules prettybox
+ %mode = handout or present
+
+\usepackage{amsmath,graphicx,color,amsfonts}
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+
+\pdsetup{
+   lf = {EC01045 PDS},
+   rf = {Sinais e Sistemas Discretos}, palette = {Sea}, randomdots={false}
+}
+
+
+%opening
+\title{\Large EC01045 -- Processamento Digital de Sinais\\ \vspace{1cm}Sinais e Sistemas Discretos}
+\author{Ronaldo de Freitas Zampolo\\FCT-ITEC-UFPA}
+\date{ }
+
+\begin{document}
+   \maketitle[randomdots={false}]
+   \begin{slide}[toc=]{Agenda}
+      \tableofcontents[content=sections]
+   \end{slide}
+   
+\section[slide=false]{Propriedades da Transf. de Fourier}
+\begin{slide}[toc=]{Sinais complexos}
+\begin{itemize}
+   \item Sequências  simétrica e anti-simétrica conjugadas
+   \begin{align*}
+      x[n] &= x_e[n]+x_o[n]\\
+      x_e[n] &= \frac{1}{2} \left \{ x[n] + x^*[-n] \right \} = x_e^*[-n]\\
+      x_o[n] &= \frac{1}{2} \left \{ x[n] - x^*[-n] \right \} = -x_o^*[-n]
+   \end{align*} 
+\end{itemize}
+\end{slide}
+
+\begin{slide}[toc=]{Sinais complexos 2}
+\begin{itemize}
+   \item Sequências  simétrica e anti-simétrica conjugadas
+\begin{itemize}
+   \item $x^*[n]\stackrel{F}{\leftrightarrow} X^*(e^{-j\omega})$
+   \item $x^*[-n]\stackrel{F}{\leftrightarrow} X^*(e^{j\omega})$
+   \item $\Re\{x[n]\} \stackrel{F}{\leftrightarrow} X_e(e^{j\omega})$
+   \item $j\Im\{x[n]\} \stackrel{F}{\leftrightarrow} X_o(e^{j\omega})$
+   \item $x_e[n] \stackrel{F}{\leftrightarrow} X_R(e^{j\omega}) = \Re\{X(e^{j\omega})\}$
+   \item $x_o[n] \stackrel{F}{\leftrightarrow} jX_I(e^{j\omega}) = j\Im\{X(e^{j\omega})\}$
+\end{itemize}
+\end{itemize}
+\end{slide}
+
+
+\begin{slide}[toc=]{Sinais reais}
+\begin{itemize}
+   \item Para $x[n]$ real
+   \begin{itemize}
+      \item $ X(e^{j\omega}) = X^*(e^{-j\omega})$
+      \item $ X_R(e^{j\omega}) = X_R(e^{-j\omega})$
+      \item $ X_I(e^{j\omega}) = -X_I(e^{-j\omega})$
+      \item $ |X(e^{j\omega})| = |X(e^{-j\omega})|$
+      \item $ \angle X(e^{j\omega}) = -\angle X(e^{-j\omega})$
+      \item $ x_o[n] \stackrel{F}{\leftrightarrow} X_R(e^{j\omega})$
+      \item $ x_e[n] \stackrel{F}{\leftrightarrow} jX_I(e^{j\omega})$
+   \end{itemize}
+\end{itemize}
+\end{slide}
+
+\section[slide=false]{Teoremas da TF}
+\begin{slide}[toc=]{Teoremas}
+\center{
+\small{\begin{tabular}{l|l}
+\hline
+Sequência & Transformada de Fourier \\
+\hline
+$x[n]$     &   $X(e^{j\omega})$ \\
+$y[n]$     &   $Y(e^{j\omega})$\\
+\hline
+1. $ax[n]+by[n]$ & $aX(e^{j\omega})+bY(e^{j\omega})$\\
+2. $x[n-n_d]$ & $e^{-j\omega n_d}X(e^{j\omega})$ \\
+3. $e^{j\omega_o n}x[n]$ & $X(e^{j(\omega-\omega_o)})$\\
+4. $x[-n]$ & $X(e^{-j\omega})$\\
+           & $X^*(e^{j\omega})$ se $x[n]$ for real\\
+5. $nx[n]$ & $j\frac{dX(e^{j\omega})}{d\omega}$\\
+6. $x[n]*y[n]$ & $X(e^{j\omega})Y(e^{j\omega})$\\
+7. $x[n]y[n]$ & $\frac{1}{2\pi}\int_{-\pi}^{\pi} X(e^{j\theta})Y(e^{j(\omega-\theta)})d\theta$\\
+\hline
+\multicolumn{2}{l}{8. $\sum_{n=-\infty}^{\infty}|x[n]|^2=\frac{1}{2\pi}\int_{-\pi}^{\pi}|X(e^{j\omega})|^2d\omega$}\\
+\multicolumn{2}{l}{9. $\sum_{n=-\infty}^{\infty}x[n]y^*[n]=\frac{1}{2\pi}\int_{-\pi}^{\pi}X(e^{j\omega})Y^*(e^{j\omega})d\omega$}\\
+\hline
+\end{tabular}}}
+\end{slide}
+
+\begin{note}{Exercícios}
+\begin{enumerate}
+   \item Deduza cada uma das propriedades da transformada de Fourier.
+   \item Prove cada um dos teoremas da transformada de Fourier. 
+\end{enumerate}
+
+\end{note}
+
+
+\section[slide=false]{Sinais discretos aleatórios}
+\begin{slide}[toc=]{Sinais determinísticos}
+\begin{itemize}
+   \item Definidos unicamente
+   \begin{itemize}
+      \item Expressão matemática
+      \item Tabela
+      \item Algum tipo de regra
+   \end{itemize}
+   
+\end{itemize}
+\end{slide}
+
+\begin{slide}[toc=]{Sinais aleatórios}
+\begin{itemize}
+   \item Processos aleat\'orios $\times$ Vari\'aveis aleat\'orias
+   \item Processo estacion\'ario
+   \begin{itemize}
+      \item Sentido estrito
+      \item Sentido amplo
+      \begin{align*}
+         m_x[n] &= E\{x[n]\}\\
+                &= k\\
+         \phi_{xx}[n,n+m] &= E\{x[n]x[n+m]\}\\
+                          &= \phi_{xx}[m]
+      \end{align*}
+   \end{itemize}
+\end{itemize}
+\end{slide}
+
+\begin{slide}[toc=]{Entrada estacionária (EE) -- média}
+\begin{itemize}
+   \item Entrada estacion\'aria $\Rightarrow$ Sa\'ida estacion\'aria
+   \item M\'edia
+   \begin{align*}
+      m_y[n] &= E\{y[n]\}\\
+             &= E\left \{\sum_{k=-\infty}^{\infty} h[n-k] x[k]\right \}\\
+             &= \sum_{k=-\infty}^{\infty} h[n-k] E\{x[k]\}\\
+             &= m_x H\left (e^{j0}\right )
+   \end{align*}
+\end{itemize}
+\end{slide}
+
+\begin{slide}[toc=]{EE -- autocorrelação (AC) 1}
+   \scriptsize{
+   \begin{align*}
+      \phi_{yy}[n,n+m] &= E\{y[n]y[n+m]\}\\
+             &= E\left\{\sum_{k=-\infty}^{\infty} h[k] x[n-k]\sum_{r=-\infty}^{\infty} h[r] x[n+m-r]\right\}\\
+             &= \sum_{k=-\infty}^{\infty} \sum_{r=-\infty}^{\infty} h[k]h[r] E\{x[n-k]x[n+m-r]\}\\
+             &= \sum_{k=-\infty}^{\infty} \sum_{r=-\infty}^{\infty} h[k]h[r] \phi_{xx}[m-r+k]
+             %&= \sum_{k=-\infty}^{\infty} \sum_{l=-\infty}^{\infty} h[k]h[l+k] \phi_{xx}[m-l]\\
+             %&= \sum_{l=-\infty}^{\infty} \phi_{xx}[m-l]\sum_{k=-\infty}^{\infty} h[k]h[l+k] \\
+             %&= \sum_{l=-\infty}^{\infty} \phi_{xx}[m-l] c_{hh}[l] \\
+             %&= \phi_{xx}[m]*c_{hh}[m]\\
+    %c_{hh}[n]&= h[n]*h[-n]  \quad\text{autocorr. determin\'istica}
+   \end{align*}}
+\end{slide}
+
+\begin{slide}[toc=]{EE -- AC 2}
+   \scriptsize{
+   \begin{align*}
+      \phi_{yy}[n,n+m] &= %E\{y[n]y[n+m]\}\\
+             %&= E\left\{\sum_{k=-\infty}^{\infty} h[k] x[n-k]\sum_{r=-\infty}^{\infty} h[r] x[n+m-r]\right\}\\
+             %&= \sum_{k=-\infty}^{\infty} \sum_{r=-\infty}^{\infty} h[k]h[r] E\{x[n-k]x[n+m-r]\}\\
+             \sum_{k=-\infty}^{\infty} \sum_{r=-\infty}^{\infty} h[k]h[r] \phi_{xx}[m-r+k]\\
+             &= \sum_{k=-\infty}^{\infty} \sum_{l=-\infty}^{\infty} h[k]h[l+k] \phi_{xx}[m-l]\\
+             &= \sum_{l=-\infty}^{\infty} \phi_{xx}[m-l]\sum_{k=-\infty}^{\infty} h[k]h[l+k] \\
+             &= \sum_{l=-\infty}^{\infty} \phi_{xx}[m-l] c_{hh}[l] \\
+             &= \phi_{xx}[m]*c_{hh}[m]    
+   \end{align*}}
+   \begin{equation*}
+      c_{hh}[n]= h[n]*h[-n]  \quad\text{(autocorrelação determin\'istica)} 
+   \end{equation*}
+\end{slide}
+
+
+
+\begin{slide}[toc=]{EE -- densidade espectral de potência}
+\begin{align*}
+   \Phi_{yy}(e^{j\omega}) &= \sum_{m=-\infty}^{\infty}  \phi_{yy}[m]e^{-j\omega m}\\
+                          &= \sum_{m=-\infty}^{\infty}  \{\phi_{xx}[m]*c_{hh}[m]\} e^{-j\omega m}\\
+                          &= \Phi_{xx}(e^{j\omega}) C_{hh}(e^{j\omega})
+\end{align*}
+\begin{equation*}
+     \boxed{\Phi_{yy}(e^{j\omega}) = \Phi_{xx}(e^{j\omega}) |H(e^{j\omega})|^2} 
+  \end{equation*}
+\end{slide}
+
+% \begin{slide}{Sinais discretos aleat\'orios}
+% \begin{itemize}
+%    \item Densidade Espectral de Pot\^encia
+%    \begin{align*}
+%     %  \Phi_{yy}(e^{j\omega}) &= \sum_{m=-\infty}^{\infty}  \phi_{yy}[m]e^{-j\omega m}\\
+%     %                         &= \sum_{m=-\infty}^{\infty}  \{\phi_{xx}[m]*c_{hh}[m]\} e^{-j\omega m}\\
+%     %                         &= \Phi_{xx}(e^{j\omega}) C_{hh}(e^{j\omega})
+%     C_{hh}(e^{j\omega})       &= \sum_{m=-\infty}^{\infty} c[m] e^{-j\omega m} \\
+%                               &= \sum_{m=-\infty}^{\infty} \sum_{k=-\infty}^{\infty}h[k]h[m+k] e^{-j\omega m} \\
+%                               &= \sum_{k=-\infty}^{\infty} h[k]\sum_{m=-\infty}^{\infty}h[m+k] e^{-j\omega m} 
+%                               %&= H(e^{j\omega})\sum_{k=-\infty}^{\infty} h[k]e^{j\omega k} \\
+%                               %&= H(e^{j\omega})H^*(e^{j\omega})\\
+%                               %&= |H(e^{j\omega})|^2
+%    \end{align*}
+% \end{itemize}
+% \end{slide}
+% 
+% \begin{slide}{Sinais discretos aleat\'orios}
+% \begin{itemize}
+%    \item Densidade Espectral de Pot\^encia
+%    \begin{align*}
+%     %  \Phi_{yy}(e^{j\omega}) &= \sum_{m=-\infty}^{\infty}  \phi_{yy}[m]e^{-j\omega m}\\
+%     %                         &= \sum_{m=-\infty}^{\infty}  \{\phi_{xx}[m]*c_{hh}[m]\} e^{-j\omega m}\\
+%     %                         &= \Phi_{xx}(e^{j\omega}) C_{hh}(e^{j\omega})
+%     C_{hh}(e^{j\omega})       %&= \sum_{m=-\infty}^{\infty} c[m] e^{-j\omega m} \\
+%                               %&= \sum_{m=-\infty}^{\infty} \sum_{k=-\infty}^{\infty}h[k]h[m+k] e^{-j\omega m} \\
+%                               %&= \sum_{k=-\infty}^{\infty} h[k]\sum_{m=-\infty}^{\infty}h[m+k] e^{-j\omega m} 
+%                               &= H(e^{j\omega})\sum_{k=-\infty}^{\infty} h[k]e^{j\omega k} \\
+%                               &= H(e^{j\omega})H^*(e^{j\omega})\\
+%                               &= |H(e^{j\omega})|^2\\
+%     \Phi_{yy}(e^{j\omega}) &= \Phi_{xx}(e^{j\omega}) C_{hh}(e^{j\omega})
+%     %\Phi_{yy}(e^{j\omega}) &= \Phi_{xx}(e^{j\omega}) |H(e^{j\omega})|^2
+%   \end{align*}
+%      
+%   \begin{equation*}
+%      \boxed{\Phi_{yy}(e^{j\omega}) = \Phi_{xx}(e^{j\omega}) |H(e^{j\omega})|^2}
+%   \end{equation*}
+% \end{itemize}
+% \end{slide}
+
+\begin{slide}[toc=]{EE -- Potência}
+\begin{itemize}
+   \item C\'alculo da pot\^encia de um sinal
+   \begin{align*}
+      E\{y^2[n]\} &= E\{y[n]y[n]\}\\
+                  &= \phi_{yy}[0]\\
+                  &= \frac{1}{2\pi}\int_{-\pi}^{\pi}\Phi_{yy}(e^{j\omega})d\omega 
+   \end{align*}
+\end{itemize}
+\end{slide}
+
+\end{document}

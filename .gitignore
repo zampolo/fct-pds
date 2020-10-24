@@ -5,3 +5,5 @@
 *.toc 
 *.bm
 *.pdf
+*-checkpoint.ipynb
+03-sinais-sistemas/oldtex/*

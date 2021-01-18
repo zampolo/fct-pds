@@ -414,8 +414,8 @@
       \item Amostragem e retenção (\emph{sample and hold})
       \begin{figure}
          \centering
-          \includegraphics[width = 0.5\textwidth]{figs/ad_conv1.eps}
-          \includegraphics[width = 0.5\textwidth]{figs/ad_conv2.eps}
+          \includegraphics[width = 0.4\textwidth]{figs/ad_conv1.eps}
+          \includegraphics[width = 0.4\textwidth]{figs/ad_conv2.eps}
       \end{figure}
 
    \end{itemize}
@@ -493,7 +493,7 @@
       \item Quantização 
       \begin{figure}
         \centering
-         \includegraphics[width = 0.75\textwidth]{figs/ad_quantz.eps}
+         \includegraphics[width = 0.65\textwidth]{figs/ad_quantz.eps}
         %\includegraphics[width = 0.5\textwidth]{ad_conv2.eps}
       \end{figure}
 
@@ -512,7 +512,7 @@
       \item Quantização 
       \begin{figure}
         \centering
-         \includegraphics[width = 0.75\textwidth]{figs/ad_quantz2.eps}
+         \includegraphics[width = 0.65\textwidth]{figs/ad_quantz2.eps}
         %\includegraphics[width = 0.5\textwidth]{ad_conv2.eps}
       \end{figure}
 
@@ -602,8 +602,8 @@
       \item Filtro de restauração 
       \begin{figure}
         \centering
-         \includegraphics[width = 0.49\textwidth]{figs/da_conv1.eps}
-        \includegraphics[width = 0.49\textwidth]{figs/da_conv2.eps}
+         \includegraphics[width = 0.45\textwidth]{figs/da_conv1.eps}
+        \includegraphics[width = 0.45\textwidth]{figs/da_conv2.eps}
       \end{figure}
 
    \end{itemize}
@@ -622,7 +622,7 @@
 			\end{equation*}
 		\item Possível solução: reconstrução a partir de $x[n]$ e nova amostragem usando $T_1$
 		\begin{itemize}
-			\item Problemas na prática: uso de elementos  de conversão não ideiais (ADC e DAC)
+			\item Problemas na prática: uso de elementos  de conversão não ideais (ADC e DAC)
 		\end{itemize}
 		\item Outra solução: mudança de taxa no domínio discreto, a partir de $x[n]$
 		\begin{itemize}
@@ -673,12 +673,12 @@
 				\item Espectro do sinal contínuo original
 			\begin{figure}
 				\centering
-				\includegraphics[width=0.5\textwidth]{figs/4-20a.eps}
+				\includegraphics[width=0.45\textwidth]{figs/4-20a.eps}
 		        \end{figure}
 		\item Espectros para a primeira amostragem 
 			\begin{figure}
 				\centering
-				\includegraphics[width=0.5\textwidth]{figs/4-20bc.eps}
+				\includegraphics[width=0.45\textwidth]{figs/4-20bc.eps}
 		        \end{figure}
 			\end{itemize}
 	\end{itemize}
@@ -691,7 +691,7 @@
 		\item Espectros após a redução de taxa de amostragem 
 			\begin{figure}
 				\centering
-				\includegraphics[width=0.5\textwidth]{figs/4-20de.eps}
+				\includegraphics[width=0.65\textwidth]{figs/4-20de.eps}
 		        \end{figure}
 			\end{itemize}
 	\end{itemize}
@@ -779,12 +779,12 @@
 				\item Espectro do sinal contínuo original
 			\begin{figure}
 				\centering
-				\includegraphics[width=0.5\textwidth]{figs/4-20a.eps}
+				\includegraphics[width=0.4\textwidth]{figs/4-20a.eps}
 		        \end{figure}
 		\item Espectros para a primeira amostragem e após expansor
 			\begin{figure}
 				\centering
-				\includegraphics[width=0.5\textwidth]{figs/4-24bc.eps}
+				\includegraphics[width=0.4\textwidth]{figs/4-24bc.eps}
 		        \end{figure}
 			\end{itemize}
 	\end{itemize}
@@ -797,7 +797,7 @@
 		\item Filtro de reconstrução e espectro final 
 			\begin{figure}
 				\centering
-				\includegraphics[width=0.5\textwidth]{figs/4-24de.eps}
+				\includegraphics[width=0.65\textwidth]{figs/4-24de.eps}
 		        \end{figure}
 			\end{itemize}
 	\end{itemize}
@@ -836,12 +836,12 @@
 			\end{equation*}
 			\begin{figure}
 				\centering
-				\includegraphics[width=0.5\textwidth]{figs/4-26a.eps}
+				\includegraphics[width=0.4\textwidth]{figs/4-26a.eps}
 		        \end{figure}
 		\item Comparação no domínio da frequência 
 			\begin{figure}
 				\centering
-				\includegraphics[width=0.5\textwidth]{figs/4-26b.eps}
+				\includegraphics[width=0.4\textwidth]{figs/4-26b.eps}
 		        \end{figure}
 	\end{itemize}
 \end{slide}
@@ -883,258 +883,258 @@
 			\end{equation*}
 			\begin{figure}
 				\centering
-				\includegraphics[width=0.7\textwidth]{figs/4-29.eps}
+				\includegraphics[width=0.6\textwidth]{figs/4-29.eps}
 		        \end{figure}
 	\end{itemize}
 \end{slide}
 
-\section{Processamento de sinais multitaxa}
-\begin{slide}{Introdução}
-	\begin{itemize}
-		\item Conjunto de técnicas que usa \emph{upsampling}, \emph{downsampling}, expansores e compressores para melhorar a eficiência de sistemas de processamento de sinais
-		\item Objetivo: redução de complexidade computacional associada a operações de mudança de taxa de amostragem
-		\item Aplicações:
-			\begin{itemize}
-				\item Conversão AD e DA que fazem uso de \emph{oversampling} e \emph{noise shaping}
-				\item Banco de filtros
-				\item \emph{Wavelets}
-			\end{itemize}
-	\end{itemize}
-\end{slide}
-
-\begin{slide}{Intercâmbio entre filtragem e compressão/expansão}
-	\begin{itemize}
-		\item Equivalência para \emph{downsampling}
-			\begin{figure}
-				\centering
-				\includegraphics[width=0.3\textwidth]{figs/4-31.eps}
-			\end{figure}
-			\begin{align*}
-				X_b(e^{j\omega}) &=H(e^{j\omega M}) X(e^{j\omega})\\
-				Y(e^{j\omega})&= \frac{1}{M} \sum_{i=0}^{M-1} X_b(e^{j(\omega/M - 2\pi i/M)})\\
-			%	&= \frac{1}{M} \sum_{i=0}^{M-1} H(e^{j\omega})X(e^{j(\omega/M - 2\pi i/M})\\
-				&= H(e^{j\omega})\frac{1}{M} \sum_{i=0}^{M-1} X(e^{j(\omega/M - 2\pi i/M)}) = H(e^{j\omega})X_a(e^{j\omega})
-			\end{align*}
-	\end{itemize}
-			
-\end{slide}
-
-\begin{slide}{Intercâmbio entre filtragem e compressão/expansão}
-	\begin{itemize}
-		\item Equivalência para \emph{upsampling}
-			\begin{figure}
-				\centering
-				\includegraphics[width=0.3\textwidth]{figs/4-32.eps}
-			\end{figure}
-			\begin{align*}
-				Y(e^{j\omega})&=X_a(e^{j\omega L})\\
-				&=H(e^{j\omega L}) X(e^{j\omega L})\\
-				X_b(e^{j\omega})&= X(e^{j\omega L})\\
-				Y(e^{j\omega})&=H(e^{j\omega L})X_b(e^{j\omega })
-			\end{align*}
-	\end{itemize}
-			
-\end{slide}
-
-\begin{slide}{Dizimação e interpolação multiestágios}
-	\begin{itemize}
-		\item Situação: downsampling com razão $M = M_1M_2$
-		\item Problema: frequência de corte do filtro passa-baixas $\pi/(M_1M_2)$ pode resultar em filtros de comprimento muito longo
-		\item Solução: downsampling em dois estágios com frequências de corte maiores ($\pi/M_1$ e $\pi/M_2$)
-			\begin{figure}
-				\centering
-				\includegraphics[width=0.5\textwidth]{figs/4-33.eps}
-			\end{figure}
-			\begin{equation*}
-				H(z) = H_1(z)H_2(z^{M_1})\qquad
-				h[n] = h_1[n] * \sum_{k=-\infty}^\infty h_2[k]\delta[n-kM_1]
-			\end{equation*}
-	\end{itemize}
-\end{slide}
-
-\begin{slide}{Dizimação e interpolação multiestágios}
-	\begin{itemize}
-		\item Situação: upsampling com razão $L = L_1L_2$
-		\item Upsampling em dois estágios 
-			\begin{figure}
-				\centering
-				\includegraphics[width=0.7\textwidth]{figs/4-34.eps}
-			\end{figure}
-	\end{itemize}
-\end{slide}
-
-\begin{slide}{Decomposição polifase}
-	\begin{itemize}
-		\item Representação de uma sequência:
-			\begin{align*}
-				h[n] &= \sum_{k=0}^{M-1} h_k[n-k]\\
-				h_k[n] &= \begin{cases} h[n+k], & n \text{ é um inteiro múltiplo de } N\\
-					                0, & \text{em outro caso}
-					  \end{cases}
-			\end{align*}
-			\begin{figure}
-				\centering
-				\includegraphics[width=0.7\textwidth]{figs/4-35.eps}
-			\end{figure}
+%\section{Processamento de sinais multitaxa}
+%\begin{slide}{Introdução}
+%	\begin{itemize}
+%		\item Conjunto de técnicas que usa \emph{upsampling}, \emph{downsampling}, expansores e compressores para melhorar a eficiência de sistemas de processamento de sinais
+%		\item Objetivo: redução de complexidade computacional associada a operações de mudança de taxa de amostragem
+%		\item Aplicações:
+%			\begin{itemize}
+%				\item Conversão AD e DA que fazem uso de \emph{oversampling} e \emph{noise shaping}
+%				\item Banco de filtros
+%				\item \emph{Wavelets}
+%			\end{itemize}
+%	\end{itemize}
+%\end{slide}
+%%%%%%%%%%
+%\begin{slide}{Intercâmbio entre filtragem e compressão/expansão}
+%	\begin{itemize}
+%		\item Equivalência para \emph{downsampling}
+%			\begin{figure}
+%				\centering
+%				\includegraphics[width=0.3\textwidth]{figs/4-31.eps}
+%			\end{figure}
+%			\begin{align*}
+%				X_b(e^{j\omega}) &=H(e^{j\omega M}) X(e^{j\omega})\\
+%				Y(e^{j\omega})&= \frac{1}{M} \sum_{i=0}^{M-1} X_b(e^{j(\omega/M - 2\pi i/M)})\\
+%			%	&= \frac{1}{M} \sum_{i=0}^{M-1} H(e^{j\omega})X(e^{j(\omega/M - 2\pi i/M})\\
+%				&= H(e^{j\omega})\frac{1}{M} \sum_{i=0}^{M-1} X(e^{j(\omega/M - 2\pi i/M)}) = H(e^{j\omega})X_a(e^{j\omega})
+%			\end{align*}
+%	\end{itemize}
+%			
+%\end{slide}
+%
+%\begin{slide}{Intercâmbio entre filtragem e compressão/expansão}
+%	\begin{itemize}
+%		\item Equivalência para \emph{upsampling}
+%			\begin{figure}
+%				\centering
+%				\includegraphics[width=0.3\textwidth]{figs/4-32.eps}
+%			\end{figure}
+%			\begin{align*}
+%				Y(e^{j\omega})&=X_a(e^{j\omega L})\\
+%%				&=H(e^{j\omega L}) X(e^{j\omega L})\\
+%				X_b(e^{j\omega})&= X(e^{j\omega L})\\
+%				Y(e^{j\omega})&=H(e^{j\omega L})X_b(e^{j\omega })
+%			\end{align*}
+%	\end{itemize}
+%			
+%\end{slide}
+%
+%\begin{slide}{Dizimação e interpolação multiestágios}
+%	\begin{itemize}
+%		\item Situação: downsampling com razão $M = M_1M_2$
+%		\item Problema: frequência de corte do filtro passa-baixas $\pi/(M_1M_2)$ pode resultar em filtros de comprimento muito longo
+%		\item Solução: downsampling em dois estágios com frequências de corte maiores ($\pi/M_1$ e $\pi/M_2$)
+%			\begin{figure}
+%				\centering
+%				\includegraphics[width=0.5\textwidth]{figs/4-33.eps}
+%			\end{figure}
+%			\begin{equation*}
+%				H(z) = H_1(z)H_2(z^{M_1})\qquad
+%				h[n] = h_1[n] * \sum_{k=-\infty}^\infty h_2[k]\delta[n-kM_1]
+%			\end{equation*}
+%	\end{itemize}
+%\end{slide}
+%
+%\begin{slide}{Dizimação e interpolação multiestágios}
+%	\begin{itemize}
+%		\item Situação: upsampling com razão $L = L_1L_2$
+%		\item Upsampling em dois estágios 
+%			\begin{figure}
+%				\centering
+%				\includegraphics[width=0.7\textwidth]{figs/4-34.eps}
+%			\end{figure}
+%	\end{itemize}
+%\end{slide}
+%
+%\begin{slide}{Decomposição polifase}
+%	\begin{itemize}
+%		\item Representação de uma sequência:
+%			\begin{align*}
+%				h[n] &= \sum_{k=0}^{M-1} h_k[n-k]\\
+%				h_k[n] &= \begin{cases} h[n+k], & n \text{ é um inteiro múltiplo de } N\\
+%					                0, & \text{em outro caso}
+%					  \end{cases}
+%			\end{align*}
+%			\begin{figure}
+%				\centering
+%				\includegraphics[width=0.7\textwidth]{figs/4-35.eps}
+%			\end{figure}
+%			%\begin{itemize}
+%			%	\item Superposição de $M$ subsequências
+%			%	\item Cada subsequência é uma versão dizimada (fator $M$) da sequência original atrasada (atraso $k$ variando de $0$ a $M-1$
+%			%\end{itemize}
+%	\end{itemize}
+%\end{slide}
+%
+%\begin{slide}{Decomposição polifase}
+%	\begin{itemize}
+%		\item Sistema equivalente:
+%			\begin{figure}
+%				\centering
+%				\includegraphics[width=0.6\textwidth]{figs/4-36.eps}
+%			\end{figure}
+%			\begin{equation*}
+%				H(z)= \sum_{k=0}^{M-1} E_k(z^M)z^{-k}
+%			\end{equation*}
 			%\begin{itemize}
-			%	\item Superposição de $M$ subsequências
-			%	\item Cada subsequência é uma versão dizimada (fator $M$) da sequência original atrasada (atraso $k$ variando de $0$ a $M-1$
-			%\end{itemize}
-	\end{itemize}
-\end{slide}
-
-\begin{slide}{Decomposição polifase}
-	\begin{itemize}
-		\item Sistema equivalente:
-			\begin{figure}
-				\centering
-				\includegraphics[width=0.6\textwidth]{figs/4-36.eps}
-			\end{figure}
-			\begin{equation*}
-				H(z)= \sum_{k=0}^{M-1} E_k(z^M)z^{-k}
-			\end{equation*}
-			%\begin{itemize}
-			%	\item Superposição de $M$ subsequências
-			%	\item Cada subsequência é uma versão dizimada (fator $M$) da sequência original atrasada (atraso $k$ variando de $0$ a $M-1$
-			%\end{itemize}
-	\end{itemize}
-\end{slide}
-
-\begin{slide}{Decomposição polifase}
-	\begin{itemize}
-		\item Implementação de um filtro usando decomposição polifase:
-			\begin{figure}
-				\centering
-				\includegraphics[width=0.5\textwidth]{figs/4-37.eps}
-			\end{figure}
-	\end{itemize}
-\end{slide}
-
-\begin{slide}{Implementação polifase de filtros dizimadores}
-	\begin{itemize}
-		\item Implementação convencional
-			\begin{figure}
-				\centering
-				\includegraphics[width=0.5\textwidth]{figs/4-38.eps}
-			\end{figure}
-		\item Implementação por decomposição polifase
-			\begin{figure}
-				\centering
-				\includegraphics[width=0.5\textwidth]{figs/4-39.eps}
-			\end{figure}
-	\end{itemize}
-\end{slide}
-
-\begin{slide}{Implementação polifase de filtros dizimadores}
-	\begin{itemize}
-		\item Implementação por decomposição polifase (continuação)
-			\begin{figure}
-				\centering
-				\includegraphics[width=0.5\textwidth]{figs/4-40.eps}
-			\end{figure}
-			\begin{table}
-				\begin{tabular}[h]{c|c|c}
-					\hline
-					Implementação & Multiplicações & Adições\\
-				        \hline	
-					Convencional &   $N$ & $N-1$ \\
-					Polifase     & $N/M$ & $(N/M -1 )+(M-1)$\\
-					\hline
-				\end{tabular}
-			\end{table}
-	\end{itemize}
-\end{slide}
-
-\begin{slide}{Implementação polifase de filtros interpoladores}
-	\begin{itemize}
-		\item Implementação convencional
-			\begin{figure}
-				\centering
-				\includegraphics[width=0.5\textwidth]{figs/4-41.eps}
-			\end{figure}
-		\item Implementação por decomposição polifase
-			\begin{figure}
-				\centering
-				\includegraphics[width=0.5\textwidth]{figs/4-42.eps}
-			\end{figure}
-	\end{itemize}
-\end{slide}
-
-\begin{slide}{Implementação polifase de filtros interpoladores}
-	\begin{itemize}
-		\item Implementação por decomposição polifase (continuação)
-			\begin{figure}
-				\centering
-				\includegraphics[width=0.5\textwidth]{figs/4-43.eps}
-			\end{figure}
-			\begin{table}
-				\begin{tabular}[h]{c|c|c}
-					\hline
-					Implementação & Multiplicações & Adições\\
-				        \hline	
-					Convencional &   $NL$ & $NL-1$ \\
-					Polifase     & $L(N/L)$ & $L(N/L -1 )$\\
-					\hline
-				\end{tabular}
-			\end{table}
-	\end{itemize}
-\end{slide}
-
-\begin{slide}{Banco de filtros multitaxa}
-	\begin{itemize}
-		\item Banco de filtros para análise e síntese
-			\begin{itemize}
-				\item Filtro passa-baixas: $h_0[n]$
-				\item Filtro passa-altas: $h_1[n] = e^{j\pi n}h_0[n]$
-				\item Filtro passa-baixas: $g_0[n]$
-				\item Filtro passa-altas: $g_1[n]$
-			\end{itemize}
-                        \begin{figure}
-				\centering
-				\includegraphics[width=0.7\textwidth]{figs/4-44.eps}
-			\end{figure}
-			\begin{align*}
-				Y(\omega) &= \frac{1}{2}\left [ G_0(\omega)H_0(\omega)+G_1(\omega)H_1(\omega)\right ] X(\omega)\\
-				          &+\frac{1}{2} \left [ G_0(\omega)H_0(\omega-\pi)+G_1(\omega)H_1(\omega-\pi)\right ] X(\omega-\pi)
-					  \end{align*}
-					  %Mostre que se os filtros de análise e síntese forem ideais, dividindo a banda $0\leq |\omega|\leq pi$, então $Y(\omega) = X(\omega)$
-
-	\end{itemize}
-\end{slide}
-
-\begin{slide}{Banco de filtros multitaxa}
-	\begin{itemize}
-		\item Banco de filtros para análise e síntese
-			\begin{align*}
-				Y(\omega) &= \frac{1}{2}\left [ G_0(\omega)H_0(\omega)+G_1(\omega)H_1(\omega)\right ] X(\omega)\\
-				          &+\frac{1}{2} \left [ G_0(\omega)H_0(\omega-\pi)+G_1(\omega)H_1(\omega-\pi)\right ] X(\omega-\pi)
-					  \end{align*}
-					  Mostre que se os filtros de análise e síntese forem ideais, dividindo a banda $0\leq |\omega|\leq pi$, então $Y(\omega) = X(\omega)$
-				  \item Condição de cancelamento de \emph{alias}:
-					  \begin{equation*}
-						  G_0(\omega)H_0(\omega-\pi)+G_1(\omega)H_1(\omega-\pi)= 0
-					  \end{equation*}
-
-	\end{itemize}
-
-\end{slide}
-% banco de filtros multitaxa
-\begin{slide}{Banco de filtros multitaxa}
-	\begin{itemize}
-		\item Implementação usando decomposição polifase
-	\begin{figure}
-				\centering
-				\includegraphics[width=0.45\textwidth]{figs/4-45a.eps}
-				\includegraphics[width=0.45\textwidth]{figs/4-45b.eps}
-			\end{figure}
-			
-\begin{figure}
-				\centering
-				\includegraphics[width=0.8\textwidth]{figs/4-46.eps}
-				
-			\end{figure}
-	\end{itemize}
-\end{slide}
-
-	
+%			%	\item Superposição de $M$ subsequências
+%			%	\item Cada subsequência é uma versão dizimada (fator $M$) da sequência original atrasada (atraso $k$ variando de $0$ a $M-1$
+%			%\end{itemize}
+%	\end{itemize}
+%\end{slide}
+%
+%\begin{slide}{Decomposição polifase}
+%	\begin{itemize}
+%		\item Implementação de um filtro usando decomposição polifase:
+%			\begin{figure}
+%				\centering
+%				\includegraphics[width=0.5\textwidth]{figs/4-37.eps}
+%			\end{figure}
+%	\end{itemize}
+%\end{slide}
+%
+%\begin{slide}{Implementação polifase de filtros dizimadores}
+%	\begin{itemize}
+%		\item Implementação convencional
+%			\begin{figure}
+%				\centering
+%				\includegraphics[width=0.5\textwidth]{figs/4-38.eps}
+%			\end{figure}
+%		\item Implementação por decomposição polifase
+%			\begin{figure}
+%				\centering
+%				\includegraphics[width=0.5\textwidth]{figs/4-39.eps}
+%			\end{figure}
+%	\end{itemize}
+%\end{slide}
+%
+%\begin{slide}{Implementação polifase de filtros dizimadores}
+%	\begin{itemize}
+%		\item Implementação por decomposição polifase (continuação)
+%			\begin{figure}
+%				\centering
+%				\includegraphics[width=0.5\textwidth]{figs/4-40.eps}
+%			\end{figure}
+%			\begin{table}
+%				\begin{tabular}[h]{c|c|c}
+%					\hline
+%					Implementação & Multiplicações & Adições\\
+%				        \hline	
+%%					Convencional &   $N$ & $N-1$ \\
+%					Polifase     & $N/M$ & $(N/M -1 )+(M-1)$\\
+%					\hline
+%				\end{tabular}
+%			\end{table}
+%	\end{itemize}
+%\end{slide}
+%
+%\begin{slide}{Implementação polifase de filtros interpoladores}
+%	\begin{itemize}
+%		\item Implementação convencional
+%			\begin{figure}
+%				\centering
+%				\includegraphics[width=0.5\textwidth]{figs/4-41.eps}
+%			\end{figure}
+%		\item Implementação por decomposição polifase
+%			\begin{figure}
+%				\centering
+%				\includegraphics[width=0.5\textwidth]{figs/4-42.eps}
+%			\end{figure}
+%	\end{itemize}
+%\end{slide}
+%
+%\begin{slide}{Implementação polifase de filtros interpoladores}
+%	\begin{itemize}
+%		\item Implementação por decomposição polifase (continuação)
+%			\begin{figure}
+%				\centering
+%				\includegraphics[width=0.5\textwidth]{figs/4-43.eps}
+%			\end{figure}
+%			\begin{table}
+%%				\begin{tabular}[h]{c|c|c}
+%					\hline
+%					Implementação & Multiplicações & Adições\\
+%				        \hline	
+%					Convencional &   $NL$ & $NL-1$ \\
+%					Polifase     & $L(N/L)$ & $L(N/L -1 )$\\
+%					\hline
+%				\end{tabular}
+%			\end{table}
+%	\end{itemize}
+%\end{slide}
+%
+%\begin{slide}{Banco de filtros multitaxa}
+%	\begin{itemize}
+%		\item Banco de filtros para análise e síntese
+%			\begin{itemize}
+%				\item Filtro passa-baixas: $h_0[n]$
+%				\item Filtro passa-altas: $h_1[n] = e^{j\pi n}h_0[n]$
+%				\item Filtro passa-baixas: $g_0[n]$
+%				\item Filtro passa-altas: $g_1[n]$
+%			\end{itemize}
+%                        \begin{figure}
+%				\centering
+%				\includegraphics[width=0.7\textwidth]{figs/4-44.eps}
+%			\end{figure}
+%			\begin{align*}
+%				Y(\omega) &= \frac{1}{2}\left [ G_0(\omega)H_0(\omega)+G_1(\omega)H_1(\omega)\right ] X(\omega)\\
+%				          &+\frac{1}{2} \left [ G_0(\omega)H_0(\omega-\pi)+G_1(\omega)H_1(\omega-\pi)\right ] X(\omega-\pi)
+%					  \end{align*}
+%					  %Mostre que se os filtros de análise e síntese forem ideais, dividindo a banda $0\leq |\omega|\leq pi$, então $Y(\omega) = X(\omega)$
+%
+%	\end{itemize}
+%\end{slide}
+%
+%\begin{slide}{Banco de filtros multitaxa}
+%	\begin{itemize}
+%		\item Banco de filtros para análise e síntese
+%			\begin{align*}
+%				Y(\omega) &= \frac{1}{2}\left [ G_0(\omega)H_0(\omega)+G_1(\omega)H_1(\omega)\right ] X(\omega)\\
+%				          &+\frac{1}{2} \left [ G_0(\omega)H_0(\omega-\pi)+G_1(\omega)H_1(\omega-\pi)\right ] X(\omega-\pi)
+%					  \end{align*}
+%					  Mostre que se os filtros de análise e síntese forem ideais, dividindo a banda $0\leq |\omega|\leq pi$, então $Y(\omega) = X(\omega)$
+%				  \item Condição de cancelamento de \emph{alias}:
+%					  \begin{equation*}
+%						  G_0(\omega)H_0(\omega-\pi)+G_1(\omega)H_1(\omega-\pi)= 0
+%					  \end{equation*}
+%
+%	\end{itemize}
+%
+%\end{slide}
+%% banco de filtros multitaxa
+%\begin{slide}{Banco de filtros multitaxa}
+%	\begin{itemize}
+%		\item Implementação usando decomposição polifase
+%	\begin{figure}
+%				\centering
+%				\includegraphics[width=0.45\textwidth]{figs/4-45a.eps}
+%				\includegraphics[width=0.45\textwidth]{figs/4-45b.eps}
+%			\end{figure}
+%			
+%\begin{figure}
+%				\centering
+%				\includegraphics[width=0.8\textwidth]{figs/4-46.eps}
+%				
+%			\end{figure}
+%	\end{itemize}
+%\end{slide}
+%
+%	
 \end{document}

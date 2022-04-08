@@ -1,0 +1,27 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (19) at (-3, 1) {};
+		\node [style=blue] (20) at (-10, 2) {};
+		\node [style=blue] (21) at (-9, 3) {};
+		\node [style=blue] (22) at (-8, 4) {};
+		\node [style=none] (23) at (-10, 1) {};
+		\node [style=none] (24) at (-9, 1) {};
+		\node [style=none] (25) at (-8, 1) {};
+		\node [style=none] (26) at (-7, 1) {};
+		\node [style=blue] (27) at (-7, 5) {};
+		\node [style=blue] (28) at (-6, 6) {};
+		\node [style=none] (29) at (-6, 1) {};
+		\node [style=blue] (30) at (-5, 1) {};
+		\node [style=blue] (31) at (-4, 1) {};
+		\node [style=none] (32) at (-12, 1) {};
+		\node [style=blue] (33) at (-11, 1) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=new edge style 0] (32.center) to (19.center);
+		\draw [style=reta blue] (23.center) to (20);
+		\draw [style=reta blue] (24.center) to (21);
+		\draw [style=reta blue] (25.center) to (22);
+		\draw [style=reta blue] (26.center) to (27);
+		\draw [style=reta blue] (28) to (29.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

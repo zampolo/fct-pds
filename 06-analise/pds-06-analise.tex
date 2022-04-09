@@ -2,12 +2,12 @@
 
 \pdsetup{
    lf = {\cursopequeno},
-   rf = {Amostragem de sinais contínuos},
+   rf = {Análise de sistemas lineares no domínio transformado},
    palette = \palette,randomdots={false},
    cf={\theslide}
 }
 
-\title{\cursogrande\\ \vspace{1cm}Amostragem de sinais contínuos}
+\title{\cursogrande\\ \vspace{1cm}Análise de sistemas lineares no domínio transformado}
 
 
 \begin{document}
@@ -17,71 +17,57 @@
    \end{slide}
 
 \section{Introdução}
-\begin{slide}{Definições e questionamentos}
+\begin{slide}{Sistema LI e sua caracterização}
 \begin{itemize}
-   \item Amostragem: retirar amostras, representar atrav\'es de amostras
-   \item Quest\~oes:
-   \begin{itemize}
-      \item Como deve ser a amostragem (qual o espa\c camento entre uma amostra e outra)?
-      \item H\'a alguma rela\c c\~ao com o sinal a ser amostrado?
-      \item Quais os efeitos de uma amostragem mal feita?
-      \item Qual a rela\c c\~ao entre o sinal cont\'inuo e o sinal amostrado?
-   \end{itemize}
+   \item Resposta ao impulso
+	   \begin{align*}
+		   y[n] &= \sum_{k=-\infty}^{\infty}x[k] h[n-k]\\
+		        &= h[n]\ast x[n]
+	   \end{align*}
+   \item Resposta em frequência
+	   \begin{equation*}
+		   Y(e^{j\omega}) = H(e^{j\omega})X(e^{j\omega})
+	   \end{equation*}
+   \item Função de transferência
+	   \begin{equation*}
+		   Y(z) = H(z)X(z)
+	   \end{equation*}
 \end{itemize}
 \end{slide}
 
-\section{Amostragem periódica}
-\begin{slide}{Elementos básicos}
+\section{Resposta em frequência de sistemas LI}
+\begin{slide}{Fase da resposta em frequência e atraso de grupo}
 \begin{itemize}
-   \item Amostras tomadas periodicamente (espa\c camento entre amostras \'e constante)
-   \begin{equation}
-      x[n] = x_c(nT), \quad -\infty<n<\infty
-   \end{equation}
-   \begin{itemize}
-      \item $x_c(t)$: sinal cont\'inuo
-      \item $x[n]$: sinal discreto (amostras de $x_c(t)$)
-      \item $T$: per\'iodo de amostragem
-      \item $f_s$: frequ\^encia de amostragem ($f_s=1/T$)
-      \item $\Omega_s=2\pi f_s=2\pi/T$
-   \end{itemize}
+	\item A resposta em frequência $H(e^{j\omega})$ pode ser vista como o ganho (complexo) que o sistema impõe a entradas exponenciais complexas do tipo $e^{j\omega}$
+	\item Relação entre entrada e saída no domínio da frequência (Transformada de Fourier)
+	   \begin{equation*}
+		   Y(e^{j\omega}) = H(e^{j\omega})X(e^{j\omega})
+	   \end{equation*}
+        \item Magnitude e fase
+	   \begin{align*}
+		   |Y(e^{j\omega})| &= |H(e^{j\omega})| |X(e^{j\omega})|\\
+		   \angle Y(e^{j\omega}) &= \angle H(e^{j\omega}) + \angle X(e^{j\omega})\\
+	   \end{align*}
 \end{itemize}
 \end{slide}
 
-\begin{slide}{Conversor C/D}
+\begin{slide}{Efeitos do atraso de grupo e atenuação}
 \begin{itemize}
-   \item Conversor cont\'inuo-discreto ideal
-   \begin{figure}
+	\item r
+\end{itemize}
+\end{slide}
+
+\section{Sistemas caracterizados por equações de diferenças com coeficientes constantes}
+\begin{slide}{Representação de sistemas}
+   \begin{figure} % exemplo de sistemas de segunda ordem
       \centering
-      \includegraphics[width=0.6\textwidth]{figs/cdideal2.eps}
+      %\includegraphics[width=0.7\textwidth]{figs/cd_implem.eps}
    \end{figure}
-   \item Conversor Anal\'ogico/Digital (A/D ou ADC): implementa\c c\~ao n\~ao-ideal de um conversor C/D
-\end{itemize}
 \end{slide}
 
-\begin{slide}{O problema da reconstrução}
+\begin{slide}{Estabilidade e Causalidade}
 \begin{itemize}
-   \item Em geral, o processo de amostragem \'e n\~ao-invert\'ivel
-   \begin{figure}
-      \centering
-      \includegraphics[width=0.6\textwidth]{figs/ambiguo.eps}
-   \end{figure}
-   \item Solu\c c\~ao: restri\c c\~ao dos sinais de entrada do conversor (a ser visto a seguir)
-\end{itemize}
-\end{slide}
-
-\begin{slide}{Diagrama de blocos}
-%\begin{itemize}
-%   \item 
-   \begin{figure}
-      \centering
-      \includegraphics[width=0.7\textwidth]{figs/cd_implem.eps}
-   \end{figure}
-%\end{itemize}
-\end{slide}
-
-\begin{slide}{Equações}
-\begin{itemize}
-   \item Os elementos básicos do diagrama de blocos são:
+   \item
    \begin{align}
       s(t) &= \sum_{n=-\infty}^{\infty}\delta(t-nT)\\
       x_s(t) &= x_c(t)s(t) \\ &= \sum_{n=-\infty}^{\infty}x_c(nT)\delta(t-nT)
@@ -89,19 +75,18 @@
 \end{itemize}
 \end{slide}
 
-\begin{slide}{Exemplos}
+\begin{slide}{Sistemas inversos}
 %\begin{itemize}
 %   \item Representa\c c\~ao:
    \begin{figure}
       \centering
-      \includegraphics[width=0.7\textwidth]{figs/representacao1.eps}
-      \includegraphics[width=0.7\textwidth]{figs/representacao2.eps}
+      %\includegraphics[width=0.7\textwidth]{figs/representacao1.eps}
+      %\includegraphics[width=0.7\textwidth]{figs/representacao2.eps}
    \end{figure}
 %\end{itemize}
 \end{slide}
 
-\section{Representação espectral}
-\begin{slide}{Equações básicas}
+\begin{slide}{Resposta ao impulso para funções de sistema racionais}
 \begin{itemize}
    \item Trem de impulsos:
    \begin{equation}
@@ -115,71 +100,65 @@
 \end{itemize}
 \end{slide}
 
-\begin{slide}{Aplicando Fourier}
+\section{Resposta em frequência para funções de sistema racionais}
+\begin{slide}{Resposta de sistemas de primeira ordem}
 \begin{itemize}
-   \item Passando para o dom\'inio transformado
-   \begin{align}
-      S(j\Omega)  &= \frac{2\pi}{T}\sum_{k=-\infty}^{\infty}\delta(\Omega-k\Omega_s)\\
-      X_s(j\Omega)&= \frac{1}{2\pi}X_c(j\Omega)*S(j\Omega)\\
-                 &= \frac{1}{T}\sum_{k=-\infty}^{\infty}X_c(j(\Omega-k\Omega_s))
-   \end{align}
-\end{itemize}
-\end{slide}
-
-\begin{slide}{Representa\c c\~ao gráfica}
-\begin{itemize}
-   \item Sinal analógico e trem de impulsos do conversor C/D 
+   \item Sinal
    \begin{figure}
       \centering
-      \includegraphics[width=0.7\textwidth]{figs/espectro01a.eps}
-      \includegraphics[width=0.7\textwidth]{figs/espectro01b.eps}
+      %\includegraphics[width=0.7\textwidth]{figs/espectro01a.eps}
+      %\includegraphics[width=0.7\textwidth]{figs/espectro01b.eps}
    \end{figure}
 \end{itemize}
 \end{slide}
 
-\begin{slide}{Estudo da situação 01}
+\begin{slide}{Exemplos com múltiplos polos e zeros}
 \begin{itemize}
    \item $\Omega_s-\Omega_N>\Omega_N$
    \begin{figure}
       \centering
-      \includegraphics[width=0.9\textwidth]{figs/situacao01.eps}
+      %\includegraphics[width=0.9\textwidth]{figs/situacao01.eps}
    \end{figure}
 \end{itemize}
 \end{slide}
 
+\section{Relação entre magnitude e fase}
 \begin{slide}{Estudo da situação 02}
 \begin{itemize}
    \item $\Omega_s-\Omega_N<\Omega_N$
    \begin{figure}
       \centering
-      \includegraphics[width=0.9\textwidth]{figs/situacao02.eps}
+      %\includegraphics[width=0.9\textwidth]{figs/situacao02.eps}
    \end{figure}
 \end{itemize}
 \end{slide}
 
-\begin{slide}{Reconstrução por filtragem 01}
+\section{Sistemas passa-tudo}
+\begin{slide}{Reconstrução }
 \begin{itemize}
-   \item Usando filtro passa-baixas ideal
+   \item Usando %filtro passa-baixas ideal
    \begin{figure}
       \centering
-      \includegraphics[width=0.7\textwidth]{figs/sistamostragem1.eps}
-      \includegraphics[width=0.7\textwidth]{figs/sistamostragem2.eps}
+      %\includegraphics[width=0.7\textwidth]{figs/sistamostragem1.eps}
+      %\includegraphics[width=0.7\textwidth]{figs/sistamostragem2.eps}
    \end{figure}
 \end{itemize}
 \end{slide}
 
+\section{Sistemas de fase mínima}
 \begin{slide}{Reconstrução por filtragem 02}
 \begin{itemize}
    \item Continuação
    \begin{figure}
       \centering
-      \includegraphics[width=0.7\textwidth]{figs/reconstr01a.eps}
+      %\includegraphics[width=0.7\textwidth]{figs/reconstr01a.eps}
       %\includegraphics[width=0.9\textwidth]{figs/reconstr01b.eps}
    \end{figure}
 \end{itemize}
 \end{slide}
 
-\begin{slide}{Teorema da amostragem de Nyquist}
+\section{Sistemas lineares com fase linear generalizada}
+\begin{slide}{uist}
 \begin{itemize}
    \item Seja $x_c(t)$ um sinal limitado em frequ\^encia, ou seja
    \begin{equation}
@@ -228,7 +207,7 @@
    \item Diagrama de blocos
    \begin{figure}
       \centering
-      \includegraphics[width=0.7\textwidth]{figs/reconstrblock.eps}
+      %\includegraphics[width=0.7\textwidth]{figs/reconstrblock.eps}
    \end{figure}
 \end{itemize}
 \end{slide}
@@ -238,7 +217,7 @@
    \item Representação da resposta em frequência
    \begin{figure}
       \centering
-      \includegraphics[width=0.9\textwidth]{figs/filtroreconstr.eps}
+      %\includegraphics[width=0.9\textwidth]{figs/filtroreconstr.eps}
    \end{figure}
 \end{itemize}
 \end{slide}
@@ -248,7 +227,7 @@
    \item Resposta ao impulso
    \begin{figure}
       \centering
-      \includegraphics[width=0.9\textwidth]{figs/filtroreconstr01.eps}
+      %\includegraphics[width=0.9\textwidth]{figs/filtroreconstr01.eps}
    \end{figure}
 \end{itemize}
 \end{slide}
@@ -270,8 +249,8 @@
    \item Sinal cont\'inuo e sinal amostrado
    \begin{figure}
       \centering
-      \includegraphics[width=0.9\textwidth]{figs/reconstr02a.eps}
-      \includegraphics[width=0.9\textwidth]{figs/reconstr02b.eps}
+      %\includegraphics[width=0.9\textwidth]{figs/reconstr02a.eps}
+      %\includegraphics[width=0.9\textwidth]{figs/reconstr02b.eps}
    \end{figure}
 \end{itemize}
 \end{slide}
@@ -281,7 +260,7 @@
    \item Sinal reconstru\'ido
    \begin{figure}
       \centering
-      \includegraphics[width=0.9\textwidth]{figs/reconstr03.eps}
+      %\includegraphics[width=0.9\textwidth]{figs/reconstr03.eps}
    \end{figure}
 \end{itemize}
 \end{slide}
@@ -304,7 +283,7 @@
    \item Diagrama de sistema de processamento discreto de sinais cont\'inuos
    \begin{figure}
       \centering
-      \includegraphics[width=0.9\textwidth]{figs/procdiscreto.eps}
+      %\includegraphics[width=0.9\textwidth]{figs/procdiscreto.eps}
    \end{figure}
 \end{itemize}
 \end{slide}
@@ -340,7 +319,7 @@
 \begin{slide}{Proc. digital de sinais anal\'ogicos}
  \begin{figure}
       \centering
-      \includegraphics[width=0.9\textwidth]{figs/diagrama_completo.eps}
+      %\includegraphics[width=0.9\textwidth]{figs/diagrama_completo.eps}
    \end{figure}
 \begin{itemize}
    \item Pré-filtragem para evitar superposição
@@ -416,8 +395,8 @@
       \item Amostragem e retenção (\emph{sample and hold})
       \begin{figure}
          \centering
-          \includegraphics[width = 0.4\textwidth]{figs/ad_conv1.eps}
-          \includegraphics[width = 0.4\textwidth]{figs/ad_conv2.eps}
+          %\includegraphics[width = 0.4\textwidth]{figs/ad_conv1.eps}
+          %\includegraphics[width = 0.4\textwidth]{figs/ad_conv2.eps}
       \end{figure}
 
    \end{itemize}
@@ -457,7 +436,7 @@
       \item Amostragem e retenção (\emph{sample and hold})
       \begin{figure}
         \centering
-         \includegraphics[width = 0.8\textwidth]{figs/ad_conv3.eps}
+         %\includegraphics[width = 0.8\textwidth]{figs/ad_conv3.eps}
         %\includegraphics[width = 0.5\textwidth]{ad_conv2.eps}
       \end{figure}
 
@@ -475,7 +454,7 @@
       \item Quantização 
       \begin{figure}
         \centering
-         \includegraphics[width = 0.8\textwidth]{figs/ad_conv4.eps}
+         %\includegraphics[width = 0.8\textwidth]{figs/ad_conv4.eps}
         %\includegraphics[width = 0.5\textwidth]{ad_conv2.eps}
       \end{figure}
 \begin{equation}
@@ -495,7 +474,7 @@
       \item Quantização 
       \begin{figure}
         \centering
-         \includegraphics[width = 0.65\textwidth]{figs/ad_quantz.eps}
+         %\includegraphics[width = 0.65\textwidth]{figs/ad_quantz.eps}
         %\includegraphics[width = 0.5\textwidth]{ad_conv2.eps}
       \end{figure}
 
@@ -514,7 +493,7 @@
       \item Quantização 
       \begin{figure}
         \centering
-         \includegraphics[width = 0.65\textwidth]{figs/ad_quantz2.eps}
+         %\includegraphics[width = 0.65\textwidth]{figs/ad_quantz2.eps}
         %\includegraphics[width = 0.5\textwidth]{ad_conv2.eps}
       \end{figure}
 
@@ -604,8 +583,8 @@
       \item Filtro de restauração 
       \begin{figure}
         \centering
-         \includegraphics[width = 0.45\textwidth]{figs/da_conv1.eps}
-        \includegraphics[width = 0.45\textwidth]{figs/da_conv2.eps}
+         %\includegraphics[width = 0.45\textwidth]{figs/da_conv1.eps}
+        %\includegraphics[width = 0.45\textwidth]{figs/da_conv2.eps}
       \end{figure}
 
    \end{itemize}
@@ -675,12 +654,12 @@
 				\item Espectro do sinal contínuo original
 			\begin{figure}
 				\centering
-				\includegraphics[width=0.45\textwidth]{figs/4-20a.eps}
+				%\includegraphics[width=0.45\textwidth]{figs/4-20a.eps}
 		        \end{figure}
 		\item Espectros para a primeira amostragem 
 			\begin{figure}
 				\centering
-				\includegraphics[width=0.45\textwidth]{figs/4-20bc.eps}
+				%\includegraphics[width=0.45\textwidth]{figs/4-20bc.eps}
 		        \end{figure}
 			\end{itemize}
 	\end{itemize}
@@ -693,7 +672,7 @@
 		\item Espectros após a redução de taxa de amostragem 
 			\begin{figure}
 				\centering
-				\includegraphics[width=0.65\textwidth]{figs/4-20de.eps}
+				%\includegraphics[width=0.65\textwidth]{figs/4-20de.eps}
 		        \end{figure}
 			\end{itemize}
 	\end{itemize}
@@ -706,7 +685,7 @@
 		\item Espectro após a redução de taxa de amostragem e filtro anti-aliasing
 			\begin{figure}
 				\centering
-				\includegraphics[width=0.8\textwidth]{figs/4-21cd.eps}
+				%\includegraphics[width=0.8\textwidth]{figs/4-21cd.eps}
 		        \end{figure}
 			\end{itemize}
 	\end{itemize}
@@ -718,7 +697,7 @@
 		\item Espectro após a redução de taxa de amostragem após filtragem anti-aliasing
 			\begin{figure}
 				\centering
-				\includegraphics[width=0.8\textwidth]{figs/4-21ef.eps}
+				%\includegraphics[width=0.8\textwidth]{figs/4-21ef.eps}
 		        \end{figure}
 			\end{itemize}
 	\end{itemize}
@@ -730,7 +709,7 @@
 				\item A redução de taxa de amostragem é precedida por filtragem passa-baixas para evitar o \emph{aliasing}
 				\begin{figure}
 					\centering
-					\includegraphics[width=0.8\textwidth]{figs/4-22.eps}
+					%\includegraphics[width=0.8\textwidth]{figs/4-22.eps}
 		        	\end{figure}
 			\end{itemize}
 	\end{itemize}
@@ -781,12 +760,12 @@
 				\item Espectro do sinal contínuo original
 			\begin{figure}
 				\centering
-				\includegraphics[width=0.4\textwidth]{figs/4-20a.eps}
+				%\includegraphics[width=0.4\textwidth]{figs/4-20a.eps}
 		        \end{figure}
 		\item Espectros para a primeira amostragem e após expansor
 			\begin{figure}
 				\centering
-				\includegraphics[width=0.4\textwidth]{figs/4-24bc.eps}
+				%\includegraphics[width=0.4\textwidth]{figs/4-24bc.eps}
 		        \end{figure}
 			\end{itemize}
 	\end{itemize}
@@ -799,7 +778,7 @@
 		\item Filtro de reconstrução e espectro final 
 			\begin{figure}
 				\centering
-				\includegraphics[width=0.65\textwidth]{figs/4-24de.eps}
+				%\includegraphics[width=0.65\textwidth]{figs/4-24de.eps}
 		        \end{figure}
 			\end{itemize}
 	\end{itemize}
@@ -809,7 +788,7 @@
 		\item Sistema geral (\emph{upsampling}, interpolador) 
 			\begin{figure}
 				\centering
-				\includegraphics[width=0.8\textwidth]{figs/4-23.eps}
+				%\includegraphics[width=0.8\textwidth]{figs/4-23.eps}
 		        \end{figure}
 	\end{itemize}
 \end{slide} 
@@ -826,7 +805,7 @@
 			\end{equation*}
 			\begin{figure}
 				\centering
-				\includegraphics[width=0.6\textwidth]{figs/4-25.eps}
+				%\includegraphics[width=0.6\textwidth]{figs/4-25.eps}
 		        \end{figure}
 	\end{itemize}
 \end{slide}
@@ -838,12 +817,12 @@
 			\end{equation*}
 			\begin{figure}
 				\centering
-				\includegraphics[width=0.4\textwidth]{figs/4-26a.eps}
+				%\includegraphics[width=0.4\textwidth]{figs/4-26a.eps}
 		        \end{figure}
 		\item Comparação no domínio da frequência 
 			\begin{figure}
 				\centering
-				\includegraphics[width=0.4\textwidth]{figs/4-26b.eps}
+				%\includegraphics[width=0.4\textwidth]{figs/4-26b.eps}
 		        \end{figure}
 	\end{itemize}
 \end{slide}
@@ -885,7 +864,7 @@
 			\end{equation*}
 			\begin{figure}
 				\centering
-				\includegraphics[width=0.6\textwidth]{figs/4-29.eps}
+				%\includegraphics[width=0.6\textwidth]{figs/4-29.eps}
 		        \end{figure}
 	\end{itemize}
 \end{slide}

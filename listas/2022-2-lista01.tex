@@ -61,6 +61,31 @@ Prof. Ronaldo de Freitas Zampolo
 			\item Qual a função de transferência $H_0(z)$ do sistema? Calcule pólos e zeros, e indique-os no plano complexo Z.
 			\item Suponha que $H_1(z) = H_0(z)$. Determine os pólos e zeros de $H_1(z)$, indicando-os no plano complexo Z.
 			\item Determine $h_1[n]$.
+	        \end{enumerate}
+	% questão 3.22 do livro-texto
+	\item Um sistema LI causal tem função de sistema
+		\begin{equation*}
+			H(z) = \frac{1-4z^{-1}}{1+0,5z^{-1}}.
+		\end{equation*}
+		A entrada desse sistema é
+		\begin{equation*}
+			x[n] = u[n] + 2\cos\left (\frac{\pi}{2}n\right )\qquad -\infty< n < \infty
+		\end{equation*}
+		Determine a saída $y[n]$ para um $n$ grande e positivo; isto é, encontre uma expressão para $y[n]$ que seja assintoticamente correta quando $n$ se torna grande. Naturalmente, uma possível abordagem é encontrar uma expressão para $y[n]$ que seja válida para todo $n$, mas há um modo mais fácil (que você deve usar).
+	
+	% questão 3.30 do livro-texto
+	\item Um sistema LI causau tem função de sistema
+		\begin{equation*}
+			H(z) = \frac{1-z^{-1}}{1-0,25z^{-2}} = \frac{1-z^{-1}}{(1-0,5z^{-1})(1+0,5z^{-1})}
+		\end{equation*}
+		\begin{enumerate}
+			\item Determine a saída do sistema quando a entrada é $x[n]=u[n]$.
+			\item Determine a entrada $x[n]$, de modo que a saída correspondente do sistema seja $y[n]=\delta[n] - \delta[n-1]$.
+			\item Determine a saída $y[n]$ quando a entrada $x[n] = \cos(0,5\pi n)$ para $-\infty < n< \infty$.
 		\end{enumerate}
+
+	\item Questão envolvendo transformada Z inversa (elaborada)
+	\item Mais uma questão: fourier e z, equ. de diferenças, resposta por convolução e transformada z (transformada z inversa)
+	\item Resposta ao impulso por resolução de equação homogênea e comparação com resposta obtida por transformada z inversa
 \end{enumerate}
 \end{document}

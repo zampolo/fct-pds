@@ -4,7 +4,7 @@
 % \tikzstyle{NAME}=[PROPERTY LIST]
 
 % Node styles
-\tikzstyle{blue}=[fill=blue, draw=black, shape=circle, minimum size=2pt]
+\tikzstyle{somador}=[fill=none, draw=black, shape=circle, minimum size=5pt]
 
 % Edge styles
-\tikzstyle{reta blue}=[-, draw=black, line width=1pt]
+\tikzstyle{seta}=[draw=black, ->]

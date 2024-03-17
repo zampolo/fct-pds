@@ -4,7 +4,13 @@
 % \tikzstyle{NAME}=[PROPERTY LIST]
 
 % Node styles
-\tikzstyle{blue}=[fill=blue, draw=black, shape=circle, minimum size=2pt]
+\tikzstyle{blue}=[fill=blue, draw=black, shape=, minimum size=2pt]
+\tikzstyle{new style 0}=[fill=none, draw=black, shape=circle, radius=85cm, line width=1pt]
+\tikzstyle{new style 1}=[fill=white, draw=black, shape=circle]
+\tikzstyle{rect}=[fill={rgb,255: red,191; green,191; blue,191}, draw={rgb,255: red,191; green,128; blue,64}, shape=rectangle, tikzit shape=rectangle]
 
 % Edge styles
-\tikzstyle{reta blue}=[-, draw=black, line width=1pt]
+\tikzstyle{reta blue}=[draw=black, line width=1pt, ->]
+\tikzstyle{right_arrow}=[draw=black, ->]
+\tikzstyle{linha_1}=[draw=black, line width=1pt, -]
+\tikzstyle{tracejado}=[-, draw={rgb,255: red,128; green,128; blue,128}, fill={rgb,255: red,191; green,191; blue,191}, tikzit fill={rgb,255: red,191; green,191; blue,191}, tikzit draw={rgb,255: red,128; green,128; blue,128}]

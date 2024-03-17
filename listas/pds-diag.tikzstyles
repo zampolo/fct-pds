@@ -14,3 +14,7 @@
 \tikzstyle{right_arrow}=[draw=black, ->]
 \tikzstyle{linha_1}=[draw=black, line width=1pt, -]
 \tikzstyle{tracejado}=[-, draw={rgb,255: red,128; green,128; blue,128}, fill={rgb,255: red,191; green,191; blue,191}, tikzit fill={rgb,255: red,191; green,191; blue,191}, tikzit draw={rgb,255: red,128; green,128; blue,128}]
+\tikzstyle{somador}=[fill=none, draw=black, shape=circle, minimum size=5pt]
+
+% Edge styles
+\tikzstyle{seta}=[draw=black, ->]

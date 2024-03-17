@@ -1,0 +1,53 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (0) at (-13, 4) {};
+		\node [style=none] (2) at (-8, 4) {};
+		\node [style=none] (3) at (-8, 5) {};
+		\node [style=none] (4) at (-5, 5) {};
+		\node [style=none] (5) at (-5, 3) {};
+		\node [style=none] (6) at (-5, 4) {};
+		\node [style=none] (7) at (-8, 3) {};
+		\node [style=none] (8) at (-2, 4) {};
+		\node [style=none] (9) at (-3, 4) {};
+		\node [style=none] (10) at (-3, 1) {};
+		\node [style=none] (11) at (-11, 1) {};
+		\node [style=none] (12) at (-7.5, 1.5) {};
+		\node [style=none] (13) at (-5.5, 1.5) {};
+		\node [style=none] (14) at (-7.5, 0.5) {};
+		\node [style=none] (15) at (-5.5, 0.5) {};
+		\node [style=none] (16) at (-5.5, 1) {};
+		\node [style=none] (17) at (-7.5, 1) {};
+		\node [style=none] (18) at (-6.5, 4) {};
+		\node [style=none] (19) at (-6.5, 4) {};
+		\node [style=none] (20) at (-6.5, 4) {};
+		\node [style=none] (21) at (-6.5, 4) {$h_0[n]$};
+		\node [style=none] (22) at (-6.5, 1) {};
+		\node [style=none] (23) at (-6.5, 1) {-$\alpha z^{-1}$};
+		\node [style=somador] (24) at (-11, 4) {$\Sigma$};
+		\node [style=none] (25) at (-12.5, 4.5) {$x[n]$};
+		\node [style=none] (26) at (-3, 4.5) {$y[n]$};
+		\node [style=none] (27) at (-9.25, 4.5) {$w[n]$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (3.center) to (2.center);
+		\draw (2.center) to (7.center);
+		\draw (7.center) to (5.center);
+		\draw (5.center) to (6.center);
+		\draw (6.center) to (4.center);
+		\draw (4.center) to (3.center);
+		\draw (6.center) to (9.center);
+		\draw (9.center) to (10.center);
+		\draw (12.center) to (13.center);
+		\draw (13.center) to (16.center);
+		\draw (16.center) to (15.center);
+		\draw (15.center) to (14.center);
+		\draw (14.center) to (17.center);
+		\draw (17.center) to (12.center);
+		\draw (17.center) to (11.center);
+		\draw [style=seta] (9.center) to (8.center);
+		\draw [style=seta] (10.center) to (16.center);
+		\draw [style=seta] (24) to (2.center);
+		\draw [style=seta] (11.center) to (24);
+		\draw [style=seta] (0.center) to (24);
+	\end{pgfonlayer}
+\end{tikzpicture}
